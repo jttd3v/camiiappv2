@@ -1,0 +1,267 @@
+{
+  "name": "Application",
+  "type": "object",
+  "properties": {
+    "srn": {
+      "type": "string",
+      "description": "Seaman Registration Number"
+    },
+    "date_applied": {
+      "type": "string",
+      "format": "date"
+    },
+    "crew_type": {
+      "type": "string",
+      "enum": [
+        "new",
+        "ex",
+        "both"
+      ],
+      "description": "New crew or ex-crew"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL of uploaded passport photo"
+    },
+    "personal_info": {
+      "type": "object",
+      "properties": {
+        "last_name": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "middle_name": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "birth_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "birth_place": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "gender": {
+          "type": "string",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        "civil_status": {
+          "type": "string"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "religion": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        },
+        "distinguishing_marks": {
+          "type": "string"
+        }
+      }
+    },
+    "contact_info": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "zip_code": {
+          "type": "string"
+        },
+        "tel_number": {
+          "type": "string"
+        },
+        "mobile_number": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "emergency_contact_name": {
+          "type": "string"
+        },
+        "emergency_contact_address": {
+          "type": "string"
+        },
+        "emergency_contact_number": {
+          "type": "string"
+        },
+        "emergency_contact_relationship": {
+          "type": "string"
+        }
+      }
+    },
+    "family_background": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "string"
+          },
+          "age": {
+            "type": "number"
+          },
+          "occupation": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "string"
+          },
+          "school_name": {
+            "type": "string"
+          },
+          "course": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "year_from": {
+            "type": "string"
+          },
+          "year_to": {
+            "type": "string"
+          },
+          "graduated": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "work_experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company_name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string",
+            "format": "date"
+          },
+          "date_to": {
+            "type": "string",
+            "format": "date"
+          },
+          "reason_for_leaving": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sea_experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "string"
+          },
+          "vessel_name": {
+            "type": "string"
+          },
+          "vessel_registry": {
+            "type": "string"
+          },
+          "year_built": {
+            "type": "string"
+          },
+          "ship_type": {
+            "type": "string"
+          },
+          "gross_tonnage": {
+            "type": "string"
+          },
+          "main_engine_type": {
+            "type": "string"
+          },
+          "horsepower_kw": {
+            "type": "string"
+          },
+          "manning_crewing_agency": {
+            "type": "string"
+          },
+          "ballast_water_treatment_system": {
+            "type": "string"
+          },
+          "nox_tier_equipment": {
+            "type": "string"
+          },
+          "ecdis_type_model": {
+            "type": "string"
+          },
+          "reason_for_leaving": {
+            "type": "string"
+          },
+          "trading_route": {
+            "type": "string"
+          },
+          "date_from": {
+            "type": "string",
+            "format": "date"
+          },
+          "date_to": {
+            "type": "string",
+            "format": "date"
+          },
+          "total_service_duration": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "submitted",
+        "under_review",
+        "approved",
+        "rejected"
+      ],
+      "default": "draft"
+    }
+  },
+  "required": [
+    "personal_info",
+    "contact_info"
+  ]
+}
