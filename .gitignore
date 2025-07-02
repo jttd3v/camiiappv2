@@ -1,0 +1,7 @@
+# Node dependencies
+node_modules/
+# PHP dependencies
+vendor/
+# Environment files
+.env
+.DS_Store

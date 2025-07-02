@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Save, FileText, CheckCircle } from "lucide-react";
 
-import FormHeader from "../components/application/FormHeader";
-import PersonalInfoSection from "../components/application/PersonalInfoSection";
-import ContactInfoSection from "../components/application/ContactInfoSection";
-import FamilyBackgroundSection from "../components/application/FamilyBackgroundSection";
-import EducationSection from "../components/application/EducationSection";
-import WorkExperienceSection from "../components/application/WorkExperienceSection";
-import SeaExperienceSection from "../components/application/SeaExperienceSection";
+import FormHeader from "./FormHeader";
+import PersonalInfoSection from "./PersonalInfoSection";
+import ContactInfoSection from "./ContactInfoSection";
+import FamilyBackgroundSection from "./FamilyBackgroundSection";
+import EducationSection from "./EducationSection";
+import WorkExperienceSection from "./WorkExperienceSection";
+import SeaExperienceSection from "./SeaExperienceSection";
 
 export default function Application() {
   const navigate = useNavigate();
